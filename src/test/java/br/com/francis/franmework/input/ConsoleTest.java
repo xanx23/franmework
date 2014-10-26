@@ -13,6 +13,6 @@ public class ConsoleTest {
 
 	@Test
 	public void shouldReadStringInput() {
-		Assert.assertEquals(1, 2 - 1);
+		Assert.assertEquals(false, "true".equals(null));
 	}
 }
