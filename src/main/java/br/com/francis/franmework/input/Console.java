@@ -80,8 +80,7 @@ public final class Console {
 	 * 
 	 * @param message
 	 *            The message to be displayed.
-	 * @return The value input by the user, parsed to Boolean, or null if the
-	 *         input is invalid.
+	 * @return True if the input equals to <code>"true"</code>, false otherwise.
 	 */
 	public static Boolean readBoolean(String message) {
 		return "true".equals(readString(message));
