@@ -8,11 +8,12 @@ public class ConsoleTest {
 	
 	@Before
 	public void setupMockito() {
-		
+		//TODO Add Mockito dependency
 	}
 
 	@Test
 	public void shouldReadStringInput() {
-		Assert.assertEquals(1, 2 - 1);
+		//TODO Add actual tests
+		Assert.assertEquals(false, "true".equals(null));
 	}
 }

@@ -4,6 +4,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Utility class used for reading console input.
+ * 
+ * @author Francis
+ *
+ */
 public final class Console {
 
 	static {
@@ -16,13 +22,20 @@ public final class Console {
 
 	}
 
-	public static String readString(String text) {
-		if (text == null) {
-			text = "";
+	/**
+	 * Shows a message on console then waits for the user input.
+	 * 
+	 * @param message
+	 *            The message to be displayed
+	 * @return The value input by the user, or null if the input is invalid.
+	 */
+	public static String readString(String message) {
+		if (message == null) {
+			message = "";
 		} else {
-			text += " ";
+			message += " ";
 		}
-		System.out.print(text);
+		System.out.print(message);
 		try {
 			return reader.readLine();
 		} catch (IOException e) {
@@ -30,23 +43,46 @@ public final class Console {
 		}
 	}
 
-	public static Integer readInt(String text) {
+	/**
+	 * Shows a message on console then waits for the user input.
+	 * 
+	 * @param message
+	 *            The message to be displayed.
+	 * @return The value input by the user, parsed to Integer, or null if the
+	 *         input is invalid.
+	 */
+	public static Integer readInt(String message) {
 		try {
-			return Integer.parseInt(readString(text));
+			return Integer.parseInt(readString(message));
 		} catch (NumberFormatException e) {
 			return null;
 		}
 	}
 
-	public static Double readDouble(String text) {
+	/**
+	 * Shows a message on console then waits for the user input.
+	 * 
+	 * @param message
+	 *            The message to be displayed.
+	 * @return The value input by the user, parsed to Double, or null if the
+	 *         input is invalid.
+	 */
+	public static Double readDouble(String message) {
 		try {
-			return Double.parseDouble(readString(text));
+			return Double.parseDouble(readString(message));
 		} catch (NumberFormatException e) {
 			return null;
 		}
 	}
 
-	public static Boolean readBoolean(String text) {
-		return "true".equals(readString(text));
+	/**
+	 * Shows a message on console then waits for the user input.
+	 * 
+	 * @param message
+	 *            The message to be displayed.
+	 * @return True if the input equals to <code>"true"</code>, false otherwise.
+	 */
+	public static Boolean readBoolean(String message) {
+		return "true".equals(readString(message));
 	}
 }
